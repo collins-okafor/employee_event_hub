@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {}
+    "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {
+    "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+        "projectPath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
         "packagesPath": "C:\\Users\\ciO\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\obj\\",
+        "outputPath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ciO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,6 +63,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",

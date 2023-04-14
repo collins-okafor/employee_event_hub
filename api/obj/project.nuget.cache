@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V5tevsrpW1vynVmXJiPORLQW/H9tRlwhkl/WZUaZdCLlPuqumCa4nZvf7eh8ytev7dKQ7f1nSzkbbes4ioTkpw==",
+  "dgSpecHash": "UfoTwZVI/Mo9GkxcIKDQMONZ0ypFJgHwg5lc8VrHBTNBmoA5u5Qb3Qo1XAHcPzq49gBxbG5edFgTCxPwQCeUSg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ciO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
@@ -15,6 +15,7 @@
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
