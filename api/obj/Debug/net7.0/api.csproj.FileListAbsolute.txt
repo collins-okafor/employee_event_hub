@@ -42,3 +42,5 @@ C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\refint\api.dll
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\api.pdb
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\api.genruntimeconfig.cache
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\ref\api.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

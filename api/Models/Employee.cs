@@ -39,9 +39,11 @@ namespace api.Models
 
         [MaxLength(100)]
         [Required(ErrorMessage = "Employee email is a required field!")]
+        [EmailAddress]
         public string Email { get; set; } = string.Empty;
 
         [MaxLength(200)]
         public string Avatar { get; set; } = string.Empty;
+
     }
 }

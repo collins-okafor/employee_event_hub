@@ -1,4 +1,7 @@
 using api.Data;
+using api.Models;
+using api.Repository;
+using api.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -10,6 +13,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// builder.Services.AddTransient<ICommonRespository<Employee>, CommonRespository<Employee>>();
 
 builder.Services.AddDbContext<DataContext>(options =>
     {
@@ -48,6 +52,9 @@ builder.Services.AddDbContext<DataContext>(options =>
         options.UseNpgsql(connStr);
     }
 );
+
+builder.Services.AddTransient<ICommonRepository<Employee>, CommonRepository<Employee>>();
+builder.Services.AddTransient<ICommonRepository<Event>, CommonRepository<Event>>();
 
 var app = builder.Build();
 

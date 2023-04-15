@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {}
+    "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {
+    "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+        "projectUniqueName": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+        "projectPath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
         "packagesPath": "C:\\Users\\ciO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\obj\\",
+        "outputPath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ciO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -76,6 +83,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -90,7 +101,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.29.0, )"
             },
             "System.Text.Json": {
               "target": "Package",
