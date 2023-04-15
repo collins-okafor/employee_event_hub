@@ -23,7 +23,8 @@ namespace api.JWT
         {
             var claims = new List<Claim>{
                new Claim(JwtRegisteredClaimNames.Name,user.Email)
-           };
+            };
+            
             var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor
             {

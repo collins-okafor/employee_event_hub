@@ -12,6 +12,7 @@ namespace api.Models
 
         [MaxLength(100)]
         [Required(ErrorMessage = "Email is a required field!")]
+        [EmailAddress]
         public string Email { get; set; } = string.Empty;
 
         [MaxLength(200)]

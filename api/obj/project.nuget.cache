@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "l1DiKmb5c76054kAvmIztqIDlq4NLk1YoKJWGhRRmrC9lsaroUFrxmJj5YBWJGYWYMIZoGfsyEGaoz8yPEVDBQ==",
+  "dgSpecHash": "UG3sTchPtei7UwhdKmEgXmwkcx4veM+vh477pUOzBRiyv66T0uPTkkX3qjAm/+IEO+s61klUDGBzN0uNCMsfLA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\ciO\\Desktop\\Dotnet\\WebPocHub\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ciO\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\ciO\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.5\\microsoft.aspnetcore.authentication.jwtbearer.7.0.5.nupkg.sha512",
     "C:\\Users\\ciO\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",

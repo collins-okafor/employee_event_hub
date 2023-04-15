@@ -1,4 +1,5 @@
 using api.Data;
+using api.JWT;
 using api.Models;
 using api.Repository;
 using api.Repository.Interface;
@@ -55,11 +56,13 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddTransient<ICommonRepository<Employee>, CommonRepository<Employee>>();
 builder.Services.AddTransient<ICommonRepository<Event>, CommonRepository<Event>>();
+builder.Services.AddTransient<IAuthenticationRepository, AuthenticationRepository>();
+builder.Services.AddScoped<ITokenManager, TokenManager>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())  
 {
     app.UseSwagger();
     app.UseSwaggerUI();

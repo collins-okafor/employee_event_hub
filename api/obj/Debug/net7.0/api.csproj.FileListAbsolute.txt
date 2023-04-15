@@ -44,3 +44,12 @@ C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\api.genruntimeconfig.
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\obj\Debug\net7.0\ref\api.dll
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ciO\Desktop\Dotnet\WebPocHub\api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
