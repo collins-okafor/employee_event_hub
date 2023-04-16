@@ -8,6 +8,6 @@ namespace api.JWT
 {
     public interface ITokenManager
     {
-        string GenerateToken(User user);
+        string GenerateToken(User user, string roleName);
     }
 }

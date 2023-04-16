@@ -7,11 +7,11 @@ namespace api.Repository.Interface
 {
     public interface ICommonRepository<T>
     {
-        List<T> GetAll();
-        T GetDetails(int id);
-        void Insert(T item);
-        void Update(T item);
-        void Delete(T item);
-        int SaveChanges();
+        Task<List<T>> GetAll();
+        Task<T> GetDetails(int id);
+        Task<T> Insert(T item);
+        Task<T> Update(T item);
+        Task<T> Delete(int id);
+        // int SaveChanges();
     }
 }

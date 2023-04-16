@@ -11,43 +11,48 @@ namespace api.Repository
     public class CommonRepository<T> : ICommonRepository<T> where T : class
     {
         private readonly DataContext _context;
-        private DbSet<T> _table;
 
         public CommonRepository(DataContext context)
         {
             _context = context;
-            _table = _context.Set<T>();
         }
 
-        public List<T> GetAll()
+        public async Task<List<T>> GetAll()
         {
-            return _table.ToList();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public T GetDetails(int id)
+        public async Task<T> GetDetails(int id)
         {
-            return _table.Find(id);
+            return await _context.Set<T>().FindAsync(id);
         }
 
-        public void Insert(T item)
+        public async Task<T> Insert(T item)
         {
-            _table.Add(item);
+            _context.Set<T>().Add(item);
+            await _context.SaveChangesAsync();
+            return item;
+
         }
 
-        public void Update(T item)
+        public async Task<T> Update(T item)
         {
-            _table.Attach(item);
+            // _context.Set<T>().Attach(item);
             _context.Entry(item).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return item;
         }
 
-        public void Delete(T item)
+        public async Task<T> Delete(int id)
         {
-            _table.Remove(item);
+            var entity = await _context.Set<T>().FindAsync(id);
+            if(entity == null)
+            {
+                return entity;
+            }
+            _context.Set<T>().Remove(entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
-
-        public int SaveChanges()
-        {
-            return _context.SaveChanges();
-        }       
     }
 } 

@@ -10,5 +10,6 @@ namespace api.Repository.Interface
     {
         int RegisterUser(User user);
         User? CheckCredentials(User user);
+        string GetUserRole(int roleId);
     }
 }

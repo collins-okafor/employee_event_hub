@@ -16,15 +16,16 @@ namespace api.JWT
 
         public TokenManager(IConfiguration config)
         {
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["WebPocHubJWT:Secret"] ?? ""));
+            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["HubJWT:Secret"] ?? ""));
         }
         
-        public string GenerateToken(User user)
+        public string GenerateToken(User user, string roleName)
         {
             var claims = new List<Claim>{
-               new Claim(JwtRegisteredClaimNames.Name,user.Email)
+               new Claim(JwtRegisteredClaimNames.Name,user.Email),
+               new Claim(ClaimTypes.Role,roleName)
             };
-            
+
             var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
             var tokenDescriptor = new SecurityTokenDescriptor
             {

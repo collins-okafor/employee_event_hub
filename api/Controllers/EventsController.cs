@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using api.DTO.EventDto;
 using api.Models;
 using api.Repository.Interface;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
@@ -13,18 +15,20 @@ namespace api.Controllers
     public class EventsController : ControllerBase
     {
         private readonly ICommonRepository<Event> _eventRepository;
+        private readonly IMapper _mapper;
 
-        public EventsController(ICommonRepository<Event> repsitory)
+        public EventsController(ICommonRepository<Event> repsitory, IMapper mapper)
         {
             _eventRepository = repsitory;
+            _mapper = mapper;
         }
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<IEnumerable<Event>> Get()
+        public async Task<ActionResult<IEnumerable<Event>>> Get()
         {
-            var events = _eventRepository.GetAll();
+            var events = await _eventRepository.GetAll();
             if (events.Count <= 0)
             {
                 return NotFound();
@@ -36,9 +40,9 @@ namespace api.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<Event> GetDetails(int id)
+        public async Task<ActionResult<GetEventDto>> GetDetails(int id)
         {
-            var event_ = _eventRepository.GetDetails(id);
+            var event_ = await _eventRepository.GetDetails(id);
             return event_ == null ? NotFound() : Ok(event_);
         }
 
@@ -46,50 +50,52 @@ namespace api.Controllers
         [HttpPost("CreateEmployee")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult Create(Event event_)
+        public async Task<ActionResult> Create(CreateEventDto? events)
         {
-            _eventRepository.Insert(event_);
-            var result = _eventRepository.SaveChanges();
-            if (result > 0)
-            {
-                // return CreatedAtAction("Getetails", new { id = employee.EmployeeId }, employee);
-                return CreatedAtAction("GetDetails", new { id = event_.EventId }, event_);
+            
+            var eventModel = _mapper.Map<Event>(events);
 
-            }
-            return BadRequest();
+			var result = await _eventRepository.Insert(eventModel);
+
+			if (result != null)
+			{
+				var eventsDetails = _mapper.Map<GetEventDto>(eventModel);
+				return CreatedAtAction("GetDetails", new { id = eventsDetails.EventId }, eventsDetails);
+			}
+
+			return BadRequest();
         }
 
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult Update(Event event_)
+        public async Task<ActionResult> Update(UpdateEventDto events)
         {
-            _eventRepository.Update(event_);
-            var result = _eventRepository.SaveChanges();
-            if (result > 0)
-            {
-                // return CreatedAtAction("Getetails", new { id = employee.EmployeeId }, employee);
-                return NoContent();
+            var eventModel = _mapper.Map<Event>(events);
 
-            }
-            return BadRequest();
+			var result = await _eventRepository.Update(eventModel);
+
+			if (result != null)
+			{
+				return Ok(result);
+			}
+
+			return BadRequest();
         }
 
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var event_ = _eventRepository.GetDetails(id);
+            var event_ = await _eventRepository.GetDetails(id);
             if (event_ == null)
             {
                  return NoContent();
             }
 
-            _eventRepository.Delete(event_);
-            _eventRepository.SaveChanges();
-            return NoContent();
+            await _eventRepository.Delete(event_.EventId);
+            return Ok(new {message = "Event has been deleted successfully."});
         }
-        
     }
 }

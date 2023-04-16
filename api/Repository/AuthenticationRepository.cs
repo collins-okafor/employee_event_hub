@@ -22,6 +22,11 @@ namespace api.Repository
             return userCredentials;
         }
 
+        public string GetUserRole(int roleId)
+        {
+            return _context.Roles.SingleOrDefault(u => u.RoleId == roleId).RoleName;
+        }
+
         public int RegisterUser(User user)
         {
             _context.Users?.Add(user);
